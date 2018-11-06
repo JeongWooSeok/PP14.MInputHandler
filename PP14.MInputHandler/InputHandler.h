@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include <vector>
+#include "InputHandler.h"
 
 class InputHandler
 {
@@ -16,6 +17,11 @@ public:
 	void clean();  // 디바이스 관련 초기화된 부분을 clear 
 	bool isKeyDown(SDL_Scancode key);
 	bool getMouseButtonState(int buttonNumber);
+	void onKeyUp();
+	void onKeyDown();
+	void onMouseMove(SDL_Event& event);
+	void onMouseButtonDown(SDL_Event& event);
+	void onMouseButtonUp(SDL_Event& event);
 
 
 	// mouse buttion events								

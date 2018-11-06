@@ -20,10 +20,11 @@ void InputHandler::clean()
 
 void InputHandler::update()
 {
+	SDL_Event event;
 	switch (event.type)
 	{
 	case SDL_QUIT:
-		TheGame::Instance()->quit();
+		TheGame::Instance()->clean();
 		break;
 	case SDL_MOUSEMOTION:
 		onMouseMove(event);
